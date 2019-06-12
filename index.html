@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html class="h-100" lang="pt-br">
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>JusFree</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
+</head>
+
+<body class="h-100 container">
+
+  <div class="row h-100">
+    <div class="col-12 my-auto">
+      <div class="container">
+
+        <header class="row mb-5">
+          <div class="col-12 d-flex justify-content-center">
+            <img style="width: 40px; height: 40px" class="mb-4" src="logo.png"></img>
+            <h1 class="d-inline">JusFree</h1>
+          </div>
+        </header>
+
+        <main class="row justify-content-center">
+
+              <div class="col-6">
+                <div class="input-group">
+                  <input type="url" class="form-control" id="jusUrl" placeholder="Cole o link aqui"></input>
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="jusBtn">Buscar</button>
+                  </div>
+                </div>
+              </div>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="modalResult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div id='header-modal'class="modal-header text-success">
+            <div class="container-fluid">
+              <div class="row justify-content-between">
+                <div class="col-4">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Ementa</h5>
+                </div>
+                <div class="col-4">
+                  <button onclick="copyToClipboard('#body-modal')" class="btn btn-sm btn-primary" type="button" id="modal-btn">Copiar</button>
+                  <div><small class="text-success" id="copied"></small></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#jusUrl').val('')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="body-modal" class="modal-body"></div>
+          <div id="modal-copy"></div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Bootstrap Javascript library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
