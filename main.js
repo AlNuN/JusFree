@@ -18,7 +18,7 @@ $('#jusBtn').on('click', ()=>{
             tribunal = url.replace('https://', '').split('.')[0].toUpperCase()
             let description = Array()
             let title = Array()
-            let content = $html.find('.JurisprudenceContent.JurisprudencePage-content p').text()
+            let content = $html.find('.JurisprudenceContent.JurisprudencePage-content.document-text div').text()
             
             $html.find('.JurisprudenceGeneralData-title').text((index, text)=>{
                 title.push(text)
